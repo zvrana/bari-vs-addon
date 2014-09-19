@@ -1,0 +1,42 @@
+---
+suite:      BariVsAddon
+version:    0.1.0.0
+
+fs-repositories:
+  - lib/%FILENAME.%EXT
+
+aliases:
+  vssdk:
+    - fsrepo://./Microsoft.VisualStudio.Shell.11.0.dll
+    - nuget://VSSDK.DTE
+    - nuget://VSSDK.Shell.Interop
+    - nuget://VSSDK.Shell.Interop.8
+    - nuget://VSSDK.Shell.Interop.9
+    - nuget://VSSDK.Shell.Interop.10
+    - nuget://VSSDK.Shell.Immutable.10
+    - nuget://VSSDK.OLE.Interop
+    - nuget://VSSDK.Shell.11
+  winforms:
+    - gac://System.Drawing
+    - gac://System.Windows.Forms
+  annotations:
+    - nuget://JetBrains.Annotations.Redist 
+
+modules:
+  - name: BariVsAddon
+    projects:
+      - name: BariVsAddon
+        csharp:
+          target-framework: 4.5
+        references:
+          - gac://System
+          - alias://winforms
+          - alias://vssdk
+          - alias://annotations
+
+products:
+  - name: BariVsAddon
+    modules:
+      - BariVsAddon
+
+    
