@@ -5,14 +5,14 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using EnvDTE;
-using Microsoft.BariVsPackage.BariExtension;
+using BariVsAddon.BariExtension;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
-using Commands = Microsoft.BariVsPackage.BariExtension.Commands;
+using Commands = BariVsAddon.BariExtension.Commands;
 
-namespace Microsoft.BariVsPackage
+namespace BariVsAddon
 {
     // This attribute tells the PkgDef creation utility (CreatePkgDef.exe) that this class is
     // a package.
@@ -144,9 +144,9 @@ namespace Microsoft.BariVsPackage
                         }
                     }
                 }
-                return (int)VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED;
+                return (int)Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED;
             }
-            return (int)VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP;
+            return (int)Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP;
         }
 
         private static VSConstants.VSStd97CmdID? ToVSStd97CmdID(uint nCmdID)

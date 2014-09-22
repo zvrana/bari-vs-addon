@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     internal class KeyboardHook : IDisposable
     {

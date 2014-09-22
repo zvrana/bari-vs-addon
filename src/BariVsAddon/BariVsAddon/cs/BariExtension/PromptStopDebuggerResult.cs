@@ -1,4 +1,4 @@
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public enum PromptStopDebuggerResult
     {

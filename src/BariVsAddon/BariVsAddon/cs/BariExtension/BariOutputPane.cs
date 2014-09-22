@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using Microsoft.BariVsPackage.BariExtension.Wrappers;
+using BariVsAddon.BariExtension.Wrappers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public class BariOutputPane
     {

@@ -1,0 +1,14 @@
+[$RootKey$\InstalledProducts\BariVsAddon]
+@="#110"
+"Package"="{<?= guid >}"
+"PID"="1.0"
+"ProductDetails"="#112"
+"LogoID"="#400"
+[$RootKey$\Packages\{<?= guid >}]
+@="BariVsPackagePackage"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="<?= classname >"
+"CodeBase"="$PackageFolder$\BariVsAddon.dll"
+[$RootKey$\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}]
+"{<?= guid >}"=dword:00000000
+

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public partial class PromptStopDebuggerDialog : Form
     {

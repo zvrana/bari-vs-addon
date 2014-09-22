@@ -3,11 +3,11 @@ using System.ComponentModel;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.BariVsPackage.BariExtension.Wrappers
+namespace BariVsAddon.BariExtension.Wrappers
 {
     class VsOutputWindowWrapper: IVsOutputWindow
     {
-        private IVsOutputWindow target;
+        private readonly IVsOutputWindow target;
 
         public VsOutputWindowWrapper(IVsOutputWindow target)
         {

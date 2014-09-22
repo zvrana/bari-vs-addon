@@ -2,11 +2,11 @@
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.BariVsPackage.BariExtension.Wrappers
+namespace BariVsAddon.BariExtension.Wrappers
 {
     class VsOutputWindowPaneWrapper : IVsOutputWindowPane
     {
-        private IVsOutputWindowPane target;
+        private readonly IVsOutputWindowPane target;
 
         public VsOutputWindowPaneWrapper(IVsOutputWindowPane target)
         {

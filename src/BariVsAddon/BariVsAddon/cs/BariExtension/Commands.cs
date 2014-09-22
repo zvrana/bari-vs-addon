@@ -7,7 +7,7 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell.Interop;
 using Process = System.Diagnostics.Process;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public class Commands
     {

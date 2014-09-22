@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.BariVsPackage.BariExtension.Wrappers
+namespace BariVsAddon.BariExtension.Wrappers
 {
     public class WrapperFactory
     {

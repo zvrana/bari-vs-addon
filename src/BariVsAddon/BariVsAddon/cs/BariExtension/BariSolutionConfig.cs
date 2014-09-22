@@ -1,7 +1,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public class BariSolutionConfig
     {

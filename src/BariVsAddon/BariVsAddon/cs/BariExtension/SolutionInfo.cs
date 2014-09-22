@@ -2,7 +2,7 @@ using System.IO;
 using EnvDTE;
 using JetBrains.Annotations;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public class SolutionInfo
     {

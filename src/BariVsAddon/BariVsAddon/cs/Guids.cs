@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Microsoft.BariVsPackage
+namespace BariVsAddon
 {
     static class GuidList
     {

@@ -38,5 +38,8 @@ products:
   - name: BariVsAddon
     modules:
       - BariVsAddon
+    postprocessors:
+      - package
+
 
     

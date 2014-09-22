@@ -1,6 +1,6 @@
 using EnvDTE;
 
-namespace Microsoft.BariVsPackage.BariExtension
+namespace BariVsAddon.BariExtension
 {
     public class StartParameters
     {
