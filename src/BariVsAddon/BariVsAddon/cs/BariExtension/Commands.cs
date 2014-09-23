@@ -129,16 +129,19 @@ namespace BariVsAddon.BariExtension
         {
             if (IsBuildNeeded)
             {
-                var promptStopDebuggerResult = PromptStopDebugger();
-                if (promptStopDebuggerResult == PromptStopDebuggerResult.Cancel) return;
-
-                if (promptStopDebuggerResult == PromptStopDebuggerResult.StopDebuggerAndExecuteAction)
+                var promptStopDebuggerResult = IsDebugging() ? PromptStopDebugger() : PromptStopDebuggerResult.StopDebuggerAndExecuteAction;
+                switch (promptStopDebuggerResult)
                 {
-                    StopDebugger();
-
-                    ExecuteBariBuild(StartWithDebugger);
-                    return;
+                    case PromptStopDebuggerResult.Cancel:
+                        return;
+                    case PromptStopDebuggerResult.StopDebuggerAndExecuteAction:
+                        StopDebugger();
+                        break;
+                    case PromptStopDebuggerResult.KeepDebuggingAndExecuteAction:
+                        break;
                 }
+                ExecuteBariBuild(StartWithDebugger);
+                return;
             }
             
             StartWithDebugger(false);
@@ -148,16 +151,19 @@ namespace BariVsAddon.BariExtension
         {
             if (IsBuildNeeded)
             {
-                var promptStopDebuggerResult = PromptStopDebugger();
-                if (promptStopDebuggerResult == PromptStopDebuggerResult.Cancel) return;
-
-                if (promptStopDebuggerResult == PromptStopDebuggerResult.StopDebuggerAndExecuteAction)
+                var promptStopDebuggerResult = IsDebugging() ? PromptStopDebugger() : PromptStopDebuggerResult.StopDebuggerAndExecuteAction;
+                switch (promptStopDebuggerResult)
                 {
-                    StopDebugger();
-
-                    ExecuteBariBuild(StartWithoutDebugger);
-                    return;
+                    case PromptStopDebuggerResult.Cancel:
+                        return;
+                    case PromptStopDebuggerResult.StopDebuggerAndExecuteAction:
+                        StopDebugger();
+                        break;
+                    case PromptStopDebuggerResult.KeepDebuggingAndExecuteAction:
+                        break;
                 }
+                ExecuteBariBuild(StartWithoutDebugger);
+                return;
             }
             
             StartWithoutDebugger(false);
