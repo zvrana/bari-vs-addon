@@ -62,8 +62,6 @@ namespace BariVsAddon.BariExtension
         private void ExecuteBariAction(string actionName, Action<bool> after = null)
         {
             var solutionInfo = new SolutionInfo(GetDte());
-            var dte = GetDte();
-            dte.ExecuteCommand("File.SaveAll");
 
             CancelAnyPreviousBariAction();
 

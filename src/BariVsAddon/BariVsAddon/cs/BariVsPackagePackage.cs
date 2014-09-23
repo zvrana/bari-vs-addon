@@ -139,6 +139,9 @@ namespace BariVsAddon
                             {
                                 if (commands.IsDebugging()) return VSConstants.S_OK;
                             }
+                            var dte = GetDte();
+                            dte.ExecuteCommand("File.SaveAll");
+
                             action();
                             return VSConstants.S_OK;
                         }
